@@ -332,12 +332,9 @@ td p {
   padding: 0 25vw;
 }
 
-#enable-javascript>details {
-  margin-top: 1.7vh;
-}
-
 noscript h2 {
-  padding: 5vh 0;
+  margin: 5vh 0;
+  padding: 0;
 }
 
 noscript p {
@@ -345,5 +342,16 @@ noscript p {
 }
 
 noscript details {
+  margin-top: 1.7vh;
   min-width: 50vw;
+  text-align: inherit;
+}
+
+noscript details summary {
+  text-align: center;
+}
+
+li {
+  line-height: 1.5em;
+  margin: 2vh 0;
 }
