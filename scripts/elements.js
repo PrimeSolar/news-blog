@@ -10,8 +10,8 @@ function navigationBarContainerF(navigationBarContainer) {
   if (navigationBarContainer != null) {
     // Define navigation bar content:
     navigationBarContainer.innerHTML += `
-    <div class="nav-scroller py-1 mb-3 border-bottom">
-      <nav class="nav nav-underline justify-content-between">
+    <div class="nav-scroller py-1 mb-4 border-bottom">
+      <nav class="nav nav-underline justify-content-around">
         <a class="nav-item nav-link link-body-emphasis active" href="#">World</a>
         <a class="nav-item nav-link link-body-emphasis" href="#">Country</a>
         <a class="nav-item nav-link link-body-emphasis" href="#">Technology</a>
@@ -19,7 +19,6 @@ function navigationBarContainerF(navigationBarContainer) {
         <a class="nav-item nav-link link-body-emphasis" href="#">Culture</a>
         <a class="nav-item nav-link link-body-emphasis" href="#">Business</a>
         <a class="nav-item nav-link link-body-emphasis" href="#">Politics</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Opinion</a>
         <a class="nav-item nav-link link-body-emphasis" href="#">Science</a>
         <a class="nav-item nav-link link-body-emphasis" href="#">Health</a>
         <a class="nav-item nav-link link-body-emphasis" href="#">Style</a>
@@ -67,6 +66,7 @@ customElements.define("check-circle", CheckCircle);
 
 // Footer
 footerContainer = document.querySelector("#footerContainer");
+const year = new Date().getFullYear();
 
 function footerContainerF(footerContainer) {
   if (footerContainer != null) {
@@ -76,7 +76,7 @@ function footerContainerF(footerContainer) {
       <footer class="pt-1 mt-5 mb-3">
         <ul class="nav justify-content-center pb-3 mb-3">
         </ul>
-        <p class="text-center pt-3 border-top text-body-secondary">Copyright © <a href="https://firstsolar.github.io/web-developer/">Vladislav Kazantsev</a> 2024</p>
+        <p class="text-center pt-3 border-top text-body-secondary">Copyright © <a href="https://primesolar.github.io/web-developer/">Vladislav Kazantsev</a> ${year}</p>
       </footer>
     </div>
       `
