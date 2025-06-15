@@ -1,25 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
     <meta charset="utf-8" />
-    <title>News Blog | Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" type="text/css" href="styles/style-min.css" />
   </head>
 
-  <body>
+  <body style="display: none">
     <div class="container">
       <header class="border-bottom lh-1 py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
           <div class="col-4 pt-1">
-            <a class="link-secondary" href="#">Subscribe</a>
+            <a href="#">Subscribe</a>
           </div>
           <div class="col-4 text-center">
             <a
@@ -31,6 +21,7 @@
           <div class="col-4 d-flex justify-content-end align-items-center">
             <a class="link-secondary" href="#" aria-label="Search">
               <svg
+                id="search-button"
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
@@ -48,7 +39,7 @@
                 <path d="M21 21l-5.2-5.2"></path>
               </svg>
             </a>
-            <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+            <a class="btn btn-sm btn-outline-secondary" href="#">Sign Up</a>
           </div>
         </div>
       </header>
@@ -61,7 +52,7 @@
         class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary row flex-lg-row align-items-center pt-5"
       >
         <div class="col-lg-6 px-0">
-          <h1 class="display-4 fst-italic">Title of a blog post</h1>
+          <h1 class="display-4 fst-italic">Title of the Blog Post</h1>
           <p class="lead my-3">
             Text excerpt, informing readers quickly and effectively about what’s
             most interesting in this post’s contents.
@@ -94,8 +85,10 @@
               <strong class="d-inline-block mb-2 text-primary-emphasis"
                 >World</strong
               >
-              <h3 class="mb-0">Featured post</h3>
-              <div class="mb-1 text-body-secondary">Sep 1</div>
+              <h3 class="mb-0">Featured Post</h3>
+              <div class="mb-1 text-body-secondary">
+                <month></month> <day></day>
+              </div>
               <p class="card-text mb-auto">
                 This is a wider card with supporting text below as a natural
                 lead-in to extra content.
@@ -129,8 +122,10 @@
               <strong class="d-inline-block mb-2 text-success-emphasis"
                 >Culture</strong
               >
-              <h3 class="mb-0">Post title</h3>
-              <div class="mb-1 text-body-secondary">Sep 2</div>
+              <h3 class="mb-0">Post Title</h3>
+              <div class="mb-1 text-body-secondary">
+                <month></month> <day></day>
+              </div>
               <p class="mb-auto">
                 This is a wider card with supporting text below as a natural
                 lead-in to extra content.
@@ -163,9 +158,9 @@
           <h3 class="pb-4 mb-4 fst-italic border-bottom">From the Source</h3>
 
           <article class="blog-post">
-            <h2 class="display-5 link-body-emphasis mb-1">Sample blog post</h2>
+            <h2 class="display-5 mb-1">Sample Blog Post</h2>
             <p class="blog-post-meta">
-              September 2, 2024 by <a href="#">Mark</a>
+              <month></month> <day></day>, <year></year> by <a href="#">Mark</a>
             </p>
 
             <p>This post shows a few different types of content.</p>
@@ -185,7 +180,7 @@
               available space and to show how a longer piece of text affects the
               surrounding content.
             </p>
-            <h3>Example lists</h3>
+            <h3>Example Lists</h3>
             <p>
               This is some extra paragraph placeholder content. It's a slightly
               shorter version of the other highly repetitive body text used
@@ -217,7 +212,7 @@
                 applications.
               </dd>
             </dl>
-            <h2>Inline HTML elements</h2>
+            <h2>Inline HTML Elements</h2>
             <p>
               HTML defines a long list of available inline tags, a complete list
               of which can be found on the
@@ -228,51 +223,30 @@
             </p>
             <ul>
               <li>
-                <strong>To bold text</strong>, use
-                <code class="language-plaintext highlighter-blue"
-                  >&lt;strong&gt;</code
-                >.
+                <strong>To bold text</strong>, use <code>&lt;strong&gt;</code>.
               </li>
-              <li>
-                <em>To italicize text</em>, use
-                <code class="language-plaintext highlighter-rouge"
-                  >&lt;em&gt;</code
-                >.
-              </li>
+              <li><em>To italicize text</em>, use <code>&lt;em&gt;</code>.</li>
               <li>
                 Abbreviations, like
                 <abbr title="HyperText Markup Language">HTML</abbr> should use
-                <code class="language-plaintext highlighter-rouge"
-                  >&lt;abbr&gt;</code
-                >, with an optional
-                <code class="language-plaintext highlighter-rouge">title</code>
+                <code>&lt;abbr&gt;</code>, with an optional
+                <code>title</code>
                 attribute for the full phrase.
               </li>
               <li>
                 Citations, like <cite>— Mark Otto</cite>, should use
-                <code class="language-plaintext highlighter-rouge"
-                  >&lt;cite&gt;</code
-                >.
+                <code>&lt;cite&gt;</code>.
               </li>
               <li>
                 <del>Deleted</del> text should use
-                <code class="language-plaintext highlighter-rouge"
-                  >&lt;del&gt;</code
-                >
+                <code>&lt;del&gt;</code>
                 and <ins>inserted</ins> text should use
-                <code class="language-plaintext highlighter-rouge"
-                  >&lt;ins&gt;</code
-                >.
+                <code>&lt;ins&gt;</code>.
               </li>
               <li>
                 Superscript <sup>text</sup> uses
-                <code class="language-plaintext highlighter-rouge"
-                  >&lt;sup&gt;</code
-                >
-                and subscript <sub>text</sub> uses
-                <code class="language-plaintext highlighter-rouge"
-                  >&lt;sub&gt;</code
-                >.
+                <code>&lt;sup&gt;</code>
+                and subscript <sub>text</sub> uses <code>&lt;sub&gt;</code>.
               </li>
             </ul>
             <p>
@@ -285,7 +259,7 @@
               available space and to show how a longer piece of text affects the
               surrounding content.
             </p>
-            <h3>Sub-heading</h3>
+            <h3>Sub-Heading</h3>
             <p>
               This is extra content of the paragraph. It was written to fill the
               available space and to show how a longer piece of text affects the
@@ -300,9 +274,10 @@
           </article>
 
           <article class="blog-post">
-            <h2 class="display-5 link-body-emphasis mb-1">Another blog post</h2>
+            <h2 class="display-5 mb-1">Another Blog Post</h2>
             <p class="blog-post-meta">
-              August 30, 2024 by <a href="#">Jacob</a>
+              <month></month> <day></day>, <year></year> by
+              <a href="#">Jacob</a>
             </p>
 
             <p>
@@ -321,7 +296,7 @@
               available space and to show how a longer piece of text affects the
               surrounding content.
             </p>
-            <h3>Example table</h3>
+            <h3>Example Table</h3>
             <p>And don't forget about tables in these posts:</p>
             <table class="table no-sticky">
               <thead>
@@ -365,9 +340,10 @@
           </article>
 
           <article class="blog-post">
-            <h2 class="display-5 link-body-emphasis mb-1">New feature</h2>
+            <h2 class="display-5 mb-1">New Feature</h2>
             <p class="blog-post-meta">
-              September 01, 2024 by <a href="#">Chris</a>
+              <month></month> <day></day>, <year></year> by
+              <a href="#">Chris</a>
             </p>
 
             <p>
@@ -411,7 +387,7 @@
               <ul class="list-unstyled">
                 <li>
                   <a
-                    class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                    class="a-flex d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 text-decoration-none border-top"
                     href="#"
                   >
                     <img
@@ -420,16 +396,19 @@
                       role="img"
                       aria-label="News photo"
                       alt="News photo"
+                      class="img-fluid"
                     />
                     <div class="col-lg-8">
                       <h6 class="mb-0">Example blog post title</h6>
-                      <small class="text-body-secondary">August 30, 2024</small>
+                      <small class="text-body-secondary"
+                        ><month></month> <day></day>, <year></year
+                      ></small>
                     </div>
                   </a>
                 </li>
                 <li>
                   <a
-                    class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                    class="a-flex d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 text-decoration-none border-top"
                     href="#"
                   >
                     <img
@@ -439,60 +418,40 @@
                       role="img"
                       aria-label="News photo"
                       alt="News photo"
+                      class="img-fluid"
                     />
                     <div class="col-lg-8">
                       <h6 class="mb-0">Another blog post title</h6>
-                      <small class="text-body-secondary">August 29, 2024</small>
+                      <small class="text-body-secondary"
+                        ><month></month> <day></day>, <year></year
+                      ></small>
                     </div>
                   </a>
                 </li>
                 <li>
                   <a
-                    class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                    class="a-flex d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 text-decoration-none border-top"
                     href="#"
                   >
                     <img
-                      clas
                       src="assets/image-6.jpg"
                       height="120"
                       role="img"
                       aria-label="News photo"
                       alt="News photo"
+                      class="img-fluid"
                     />
                     <div class="col-lg-8">
                       <h6 class="mb-0">
                         Longer blog post title: This one has multiple lines!
                       </h6>
-                      <small class="text-body-secondary">August 28, 2024</small>
+                      <small class="text-body-secondary"
+                        ><month></month> <day></day>, <year></year
+                      ></small>
                     </div>
                   </a>
                 </li>
               </ul>
-            </div>
-
-            <div class="p-4">
-              <h4 class="fst-italic">Archives</h4>
-              <ol class="list-unstyled mb-0">
-                <li><a href="#">September 2024</a></li>
-                <li><a href="#">August 2024</a></li>
-                <li><a href="#">July 2024</a></li>
-                <li><a href="#">June 2024</a></li>
-                <li><a href="#">May 2024</a></li>
-                <li><a href="#">April 2024</a></li>
-                <li><a href="#">March 2024</a></li>
-                <li><a href="#">February 2024</a></li>
-                <li><a href="#">January 2024</a></li>
-                <li><a href="#">December 2023</a></li>
-                <li><a href="#">November 2023</a></li>
-                <li><a href="#">October 2023</a></li>
-                <li><a href="#">September 2023</a></li>
-                <li><a href="#">August 2023</a></li>
-                <li><a href="#">July 2023</a></li>
-                <li><a href="#">June 2023</a></li>
-                <li><a href="#">May 2023</a></li>
-                <li><a href="#">April 2023</a></li>
-                <li><a href="#">March 2023</a></li>
-              </ol>
             </div>
 
             <div class="p-4">
@@ -508,131 +467,10 @@
       </div>
     </main>
 
-    <!-- Footer -->
     <div id="footerContainer"></div>
 
-    <!-- Enable JavaScript -->
-    <noscript>
-      <style>
-        .container {
-          display: none;
-        }
-      </style>
-      <section id="enable-javascript">
-        <h2>Enable JavaScript</h2>
-        <p>
-          Because this document uses web based technologies, it requires
-          interactive browser functionality. This functionality is provided, in
-          part, by JavaScript. You might have to enable JavaScript within the
-          browser in order to ensure that the document displays correctly and
-          its features work as expected.
-        </p>
-        <p>
-          Instructions for enabling JavaScript vary by browser. Select your
-          browser from the list to learn how.
-        </p>
-        <details>
-          <summary>
-            <strong>Chrome</strong>
-          </summary>
-          <ol type="1">
-            <li>
-              Click on the browser menu button in the browser upper right
-              corner.
-            </li>
-            <li>Click <strong>Settings</strong>.</li>
-            <li>
-              Click <strong>Privacy and security</strong> in the side menu.
-            </li>
-            <li>Click <strong>Site settings</strong>.</li>
-            <li>
-              Scroll to the <strong>JavaScript</strong> section and click on it.
-            </li>
-            <li>Click <strong>&lt;&gt; Sites can use Javascript</strong>.</li>
-            <li>Refresh this page.</li>
-          </ol>
-        </details>
-        <details>
-          <summary>
-            <strong>Edge</strong>
-          </summary>
-          <ol type="1">
-            <li>
-              Click on the browser menu button in the browser upper right
-              corner.
-            </li>
-            <li>Click <strong>Settings</strong>.</li>
-            <li>
-              Choose <strong>Cookies and site permissions</strong> section.
-            </li>
-            <li>
-              Scroll to the <strong>JavaScript</strong> section and click on it.
-            </li>
-            <li>Click <strong>Allowed (recommended)</strong>.</li>
-            <li>Refresh this page.</li>
-          </ol>
-        </details>
-        <details>
-          <summary>
-            <strong>Firefox</strong>
-          </summary>
-          <ol type="1">
-            <li>
-              Type <code>about:config</code> in the address bar and press
-              <strong>Enter</strong>. A warning page may appear. Click
-              <strong>Accept the Risk and Continue</strong> to go to the
-              <strong>about:config</strong> page.
-            </li>
-            <li>
-              In <strong>Search preference name</strong> field, type
-              <code>javascript.enabled</code>. It should be set to
-              <code>true</code> by default.
-            </li>
-            <li>
-              If <code>javascript.enabled</code> is set to <code>false</code>,
-              click <strong>Toggle</strong> or <strong>Reset</strong> to set it
-              back to <code>true</code>.
-            </li>
-            <li>Refresh this page.</li>
-          </ol>
-        </details>
-        <details>
-          <summary>
-            <strong>Opera</strong>
-          </summary>
-          <ol type="1">
-            <li>
-              Click on the browser menu button in the browser upper right
-              corner.
-            </li>
-            <li>
-              Scroll all the way down and click
-              <strong>Go to full browser settings</strong>.
-            </li>
-            <li>
-              Scroll to the <strong>Privacy and security</strong> section.
-            </li>
-            <li>Click <strong>Site Settings</strong>.</li>
-            <li>
-              Scroll to the <strong>JavaScript</strong> section and click on it.
-            </li>
-            <li>Click <strong>&lt;&gt; Sites can use Javascript</strong>.</li>
-            <li>Refresh this page.</li>
-          </ol>
-        </details>
-      </section>
-    </noscript>
-
-    <!-- Scripts -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      type="text/javascript"
-      src="scripts/p-1-line-indent-min.js"
-    ></script>
-    <script type="text/javascript" src="scripts/elements-min.js"></script>
+    <script src="scripts/p-1-line-indent-min.js"></script>
+    <script src="scripts/elements-min.js"></script>
+    <script src="scripts/meta-tags-min.js"></script>
   </body>
 </html>
