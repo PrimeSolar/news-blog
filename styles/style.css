@@ -2,15 +2,32 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background: linear-gradient(135deg, #009688 0%, #004d40 100%);
+  background: linear-gradient(45deg, #004d40 0%, #009688 100%);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  box-sizing: border-box;
 }
 
-body, a, code, table, .blog-header-logo, .nav-underline, .link-body-emphasis, .text-primary-emphasis, .text-success-emphasis, .text-body-secondary {
+body,
+a,
+code,
+table,
+.blog-header-logo,
+.nav-underline,
+.link-body-emphasis,
+.text-primary-emphasis,
+.text-success-emphasis,
+.text-body-secondary {
   color: #f2f2f2 !important;
   text-decoration-color: #f2f2f2 !important;
+}
+
+@media (max-width: 370px) {
+  #search-button {
+    margin-left: 0.25rem !important;
+    margin-right: 0.25rem !important;
+  }
 }
 
 .btn {
@@ -20,7 +37,7 @@ body, a, code, table, .blog-header-logo, .nav-underline, .link-body-emphasis, .t
 .btn:hover {
   background: #f2f2f2;
   border-color: #f2f2f2;
-  color: #555 !important;
+  color: #555555 !important;
 }
 
 .btn-outline-secondary {
@@ -30,15 +47,20 @@ body, a, code, table, .blog-header-logo, .nav-underline, .link-body-emphasis, .t
 .btn-outline-secondary:hover {
   background: #f2f2f2;
   border-color: #f2f2f2;
-  color: #555 !important;
+  color: #555555 !important;
 }
 
 .link-secondary {
+  color: #f2f2f2 !important;
   text-decoration: none;
 }
 
+.link-secondary:hover {
+  color: #f2f2f2 !important;
+}
+
 .bg-body-tertiary {
-  color: #555;
+  color: #555555;
 }
 
 #logo {
@@ -67,7 +89,7 @@ body, a, code, table, .blog-header-logo, .nav-underline, .link-body-emphasis, .t
 to-top {
   background: #009688;
   position: fixed;
-  bottom: 56px;
+  bottom: calc(3.5rem + 1px);
   right: 25px;
   width: 45px;
   height: 45px;
@@ -84,7 +106,7 @@ to-top {
 }
 
 to-top.active {
-  bottom: 56px;
+  bottom: calc(3.5rem + 1px);
   pointer-events: auto;
   opacity: 1;
 }
@@ -93,26 +115,56 @@ tab0d5 {
   padding-left: 22px;
 }
 
-thead {
-  background: #00c0a0;
+a {
+  position: relative;
+  max-width: 100%;
+  width: fit-content;
+  text-decoration: none;
+}
+
+a:not(.blog-header-logo, .link-secondary, .d-flex, .btn, #to-top)::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #008688 0%, #00c0a0 100%);
+}
+
+li {
+  line-height: 1.5em;
+  margin: 2vh 0;
+}
+
+table,
+table * {
+  background-color: #00000000 !important;
+  color: #f2f2f2 !important;
+}
+
+thead,
+thead * {
   position: sticky;
   top: 0;
   z-index: 2;
+  background-color: #009688 !important;
+  color: #f2f2f2 !important;
 }
 
-.no-sticky>thead {
+.no-sticky > thead {
   position: relative;
 }
 
 th {
-  border-bottom: 1px solid #ddd;
-  border-left: 1px solid #fff;
+  border-bottom: 1px solid #dddddd;
   color: #f2f2f2;
 }
 
-th, td {
+th,
+td {
   padding: 8px;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid #dddddd;
 }
 
 td p {
@@ -126,11 +178,50 @@ td p {
   margin-right: 0;
 }
 
-.row>.aos-item {
+.row > .aos-item {
   padding-left: 0;
   padding-right: 0;
   margin-left: 0;
   margin-right: 0;
+}
+
+@media print {
+  body,
+  a,
+  code,
+  table,
+  .blog-header-logo,
+  .nav-underline,
+  .link-body-emphasis,
+  .text-primary-emphasis,
+  .text-success-emphasis,
+  .text-body-secondary {
+    color: #222222 !important;
+  }
+}
+
+.a-flex {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically on smaller screens */
+  flex-wrap: wrap; /* Allow wrapping of items */
+}
+
+@media (min-width: 992px) {
+  /* Adjust for larger screens */
+  a {
+    flex-direction: row; /* Change to horizontal layout on larger screens */
+  }
+}
+
+.col-lg-8 {
+  max-width: 100%; /* Ensure the column does not exceed the width of the anchor */
+}
+
+h6 {
+  overflow-wrap: break-word; /* Allow long words to break and wrap */
+  word-wrap: break-word; /* For better compatibility */
+  max-width: 100%; /* Ensure the h6 does not exceed the width of the parent */
+  margin: 0; /* Remove default margin to prevent overflow */
 }
 
 /*noscript*/
@@ -161,9 +252,4 @@ noscript details {
 
 noscript details summary {
   text-align: center;
-}
-
-li {
-  line-height: 1.5em;
-  margin: 2vh 0;
 }
