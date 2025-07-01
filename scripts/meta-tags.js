@@ -77,10 +77,10 @@ scriptBootstrap.src =
 scriptBootstrap.crossorigin = "anonymous";
 document.querySelector("body").appendChild(scriptBootstrap);
 
-// Insert <link rel="icon" href="pics/logos/favicon.jpg">
+// Insert <link rel="icon" href="pics/logos/logo.svg">
 const linkImage = document.createElement("link");
 linkImage.rel = "icon";
-linkImage.href = "assets/favicon.svg";
+linkImage.href = "assets/logo.svg";
 document.querySelector("head").appendChild(linkImage);
 
 // Set `type="text/javascript"` for all <script> elements for better compatibility
