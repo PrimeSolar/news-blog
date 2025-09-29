@@ -132,6 +132,46 @@ a:not(.blog-header-logo, .link-secondary, .d-flex, .btn, #to-top)::before {
   background: linear-gradient(90deg, #008688 0%, #00c0a0 100%);
 }
 
+footer p {
+  font-size: 21px;
+}
+
+.bmc-button {
+  display: block; /* Specify the display behavior of the element */
+  width: fit-content; /* Set the width of the element */
+  height: 3rem; /* Set the height of the element */
+  margin: 0.75rem auto 0; /* Set the size for the margin of the element */
+  background-color: #ff843f !important; /* Set the color for the background of the element */
+  color: #ffffff; /* Set the color for the text of the element */
+  font-family: "Cookie", cursive; /* Set the font family for the text of the element */
+  font-weight: bold; /* Set the font weight for the text of the element */
+  text-decoration: none !important; /* Set the decoration for the text of the element */
+  text-shadow: 1px 1px 2px #00000080; /* Set the shadow for the text of the element */
+  border: none;
+  padding: 10px 20px; /* Set the padding of the element */
+  outline: none;
+  cursor: pointer; /* Specify the type of cursor to be displayed when hovering over the element */
+  box-shadow: 0 4px 8px #00000037; /* Set the shadow of the element */
+  /* Set the border radius for the corners of the element */
+  -webkit-border-radius: 5px; /* For older versions of Chrome and Safari */
+  -moz-border-radius: 5px; /* For older versions of Firefox */
+  -o-border-radius: 5px; /* For older versions of Opera */
+  border-radius: 5px; /* Standard property for border radius */
+  /* Add a transition effect for changes in properties */
+  -webkit-transition: 0.5s; /* For older versions of Chrome and Safari */
+  -o-transition: 0.5s; /* For older versions of Opera */
+  transition: 0.5s; /* Standard syntax for modern browsers (widely supported) */
+}
+
+.bmc-button::before {
+  background: none !important;
+}
+
+.bmc-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 8px #0000004d;
+}
+
 li {
   line-height: 1.5em;
   margin: 2vh 0;
