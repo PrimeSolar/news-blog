@@ -3,7 +3,7 @@
  * This file is the library containing my collection of custom, reusable web components
  * that can be used across different parts of the project. These components go beyond what browsers provide,
  * allowing for expanded capabilities and functionality in the project.
- * 
+ *
  * Copyright © Vladislav Kazantsev
  * All rights reserved.
  * This code is the intellectual property of Vladislav Kazantsev.
@@ -16,12 +16,18 @@
  * For inquiries about collaboration, usage outside exploratory purposes, or permissions, please contact: hypervisor7@pm.me
  */
 
-// The Navigation Bar
-navigationBarContainer = document.querySelector("#navigationBarContainer");
+/** The Navigation Bar. */
+const navigationBarContainer = document.querySelector(
+  "#navigationBarContainer"
+);
 
+/**
+ * The script includes detailed comments
+ * to support stakeholders with varying JS knowledge.
+ */
 function navigationBarContainerF(navigationBarContainer) {
-  if (navigationBarContainer != null) {
-    // Define the navigation bar content:
+  if (navigationBarContainer !== null) {
+    /** Define the navigation bar content. */
     navigationBarContainer.innerHTML += `
     <div class="nav-scroller py-1 mb-4 border-bottom">
       <nav class="nav nav-underline justify-content-around">
@@ -44,16 +50,21 @@ function navigationBarContainerF(navigationBarContainer) {
 }
 navigationBarContainerF(navigationBarContainer);
 
-// The Scroll to Top Button
+/** The Scroll to Top Button. */
 class ToTop extends HTMLElement {
   connectedCallback() {
-    this.innerHTML += `
-    <a href="#" id="to-top" aria-label="Scroll to top" title="Scroll to top">
+    this.innerHTML = `
+    <a class="to-top" aria-label="Scroll to top" title="Scroll to top">
       <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M6 15L12 9L18 15" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6 15L12 9L18 15" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </a>
     `;
+
+    this.querySelector(".to-top").addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
   }
 }
 customElements.define("to-top", ToTop);
@@ -69,8 +80,8 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// The Footer
-footerContainer = document.querySelector("#footerContainer");
+/** The Footer. */
+const footerContainer = document.querySelector("#footerContainer");
 const year = new Date().getFullYear();
 const month = new Date().getMonth();
 const day = new Date().getUTCDate();
@@ -99,8 +110,8 @@ for (let x of document.querySelectorAll("day")) {
 }
 
 function footerContainerF(footerContainer) {
-  if (footerContainer != null) {
-    // Define the footer content:
+  if (footerContainer !== null) {
+    /** Define the footer content. */
     footerContainer.innerHTML += `
     <div class="container pt-1 mt-1">
       <footer class="pt-1 mt-5 mb-3">
