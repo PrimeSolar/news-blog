@@ -24,6 +24,8 @@ body {
   box-sizing: border-box;
 }
 
+/* The style sheet includes detailed property comments
+to support stakeholders with varying CSS knowledge. */
 body,
 a,
 code,
@@ -34,8 +36,8 @@ table,
 .text-primary-emphasis,
 .text-success-emphasis,
 .text-body-secondary {
-  color: #f2f2f2 !important;
-  text-decoration-color: #f2f2f2 !important;
+  color: #f7f7f7 !important;
+  text-decoration-color: #f7f7f7 !important;
 }
 
 @media (max-width: 370px) {
@@ -46,32 +48,32 @@ table,
 }
 
 .btn {
-  border-color: #f2f2f2;
+  border-color: #f7f7f7;
 }
 
 .btn:hover {
-  background: #f2f2f2;
-  border-color: #f2f2f2;
+  background: #f7f7f7;
+  border-color: #f7f7f7;
   color: #555555 !important;
 }
 
 .btn-outline-secondary {
-  border-color: #f2f2f2;
+  border-color: #f7f7f7;
 }
 
 .btn-outline-secondary:hover {
-  background: #f2f2f2;
-  border-color: #f2f2f2;
+  background: #f7f7f7;
+  border-color: #f7f7f7;
   color: #555555 !important;
 }
 
 .link-secondary {
-  color: #f2f2f2 !important;
+  color: #f7f7f7 !important;
   text-decoration: none;
 }
 
 .link-secondary:hover {
-  color: #f2f2f2 !important;
+  color: #f7f7f7 !important;
 }
 
 .bg-body-tertiary {
@@ -102,22 +104,22 @@ table,
 }
 
 to-top {
-  background: #009688;
   position: fixed;
   bottom: calc(3.5rem + 1px);
   right: 25px;
+  border-radius: 50%;
   width: 45px;
   height: 45px;
-  border-radius: 50%;
+  font-size: 16px;
+  text-decoration: none;
   z-index: 2;
+  background: #009688;
   opacity: 0;
+  cursor: pointer;
+  transition: 0.25s;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
-  text-decoration: none;
-  pointer-events: none;
-  transition: 0.25s;
 }
 
 to-top.active {
@@ -137,7 +139,7 @@ a {
   text-decoration: none;
 }
 
-a:not(.blog-header-logo, .link-secondary, .d-flex, .btn, #to-top)::before {
+a:not(.blog-header-logo, .link-secondary, .d-flex, .btn, .to-top)::before {
   content: "";
   width: 100%;
   height: 1px;
@@ -152,30 +154,30 @@ footer p {
 }
 
 .bmc-button {
-  display: block; /* Specify the display behavior of the element */
-  width: fit-content; /* Set the width of the element */
-  height: 3rem; /* Set the height of the element */
-  margin: 0.75rem auto 0; /* Set the size for the margin of the element */
-  background-color: #ff843f !important; /* Set the color for the background of the element */
-  color: #ffffff; /* Set the color for the text of the element */
-  font-family: "Cookie", cursive; /* Set the font family for the text of the element */
-  font-weight: bold; /* Set the font weight for the text of the element */
-  text-decoration: none !important; /* Set the decoration for the text of the element */
-  text-shadow: 1px 1px 2px #00000080; /* Set the shadow for the text of the element */
+  display: block; /* Specify the display behavior of the element. */
+  width: fit-content; /* Set the width of the element. */
+  height: 3rem; /* Set the height of the element. */
+  margin: 0.75rem auto 0; /* Set the size for the margin of the element. */
+  background-color: #ff843f !important; /* Set the color for the background of the element. */
+  color: #ffffff; /* Set the color for the text of the element. */
+  font-family: "Cookie", cursive; /* Set the font family for the text of the element. */
+  font-weight: bold; /* Set the font weight for the text of the element. */
+  text-decoration: none !important; /* Set the decoration for the text of the element. */
+  text-shadow: 1px 1px 2px #00000080; /* Set the shadow for the text of the element. */
   border: none;
-  padding: 10px 20px; /* Set the padding of the element */
+  padding: 10px 20px; /* Set the padding of the element. */
   outline: none;
-  cursor: pointer; /* Specify the type of cursor to be displayed when hovering over the element */
-  box-shadow: 0 4px 8px #00000037; /* Set the shadow of the element */
-  /* Set the border radius for the corners of the element */
-  -webkit-border-radius: 5px; /* For older versions of Chrome and Safari */
-  -moz-border-radius: 5px; /* For older versions of Firefox */
-  -o-border-radius: 5px; /* For older versions of Opera */
-  border-radius: 5px; /* Standard property for border radius */
-  /* Add a transition effect for changes in properties */
-  -webkit-transition: 0.5s; /* For older versions of Chrome and Safari */
-  -o-transition: 0.5s; /* For older versions of Opera */
-  transition: 0.5s; /* Standard syntax for modern browsers (widely supported) */
+  cursor: pointer; /* Specify the type of cursor to be displayed when hovering over the element. */
+  box-shadow: 0 4px 8px #00000037; /* Set the shadow of the element. */
+  /* Set the border radius for the corners of the element. */
+  -webkit-border-radius: 5px; /* For older versions of Chrome and Safari. */
+  -moz-border-radius: 5px; /* For older versions of Firefox. */
+  -o-border-radius: 5px; /* For older versions of Opera. */
+  border-radius: 5px; /* Standard property for border radius. */
+  /* Add a transition effect for changes in properties. */
+  -webkit-transition: 0.5s; /* For older versions of Chrome and Safari. */
+  -o-transition: 0.5s; /* For older versions of Opera. */
+  transition: 0.5s; /* Standard syntax for modern browsers (widely supported). */
 }
 
 .bmc-button::before {
@@ -195,7 +197,7 @@ li {
 table,
 table * {
   background-color: #00000000 !important;
-  color: #f2f2f2 !important;
+  color: #f7f7f7 !important;
 }
 
 thead,
@@ -204,7 +206,7 @@ thead * {
   top: 0;
   z-index: 2;
   background-color: #009688 !important;
-  color: #f2f2f2 !important;
+  color: #f7f7f7 !important;
 }
 
 .no-sticky > thead {
@@ -213,7 +215,7 @@ thead * {
 
 th {
   border-bottom: 1px solid #dddddd;
-  color: #f2f2f2;
+  color: #f7f7f7;
 }
 
 th,
@@ -256,27 +258,27 @@ td p {
 }
 
 .a-flex {
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack items vertically on smaller screens */
-  flex-wrap: wrap; /* Allow wrapping of items */
+  display: flex; /* Use flexbox for layout. */
+  flex-direction: column; /* Stack items vertically on smaller screens. */
+  flex-wrap: wrap; /* Allow wrapping of items. */
 }
 
 @media (min-width: 992px) {
-  /* Adjust for larger screens */
+  /* Adjust for larger screens. */
   a {
-    flex-direction: row; /* Change to horizontal layout on larger screens */
+    flex-direction: row; /* Change to horizontal layout on larger screens. */
   }
 }
 
 .col-lg-8 {
-  max-width: 100%; /* Ensure the column does not exceed the width of the anchor */
+  max-width: 100%; /* Ensure the column does not exceed the width of the anchor. */
 }
 
 h6 {
-  overflow-wrap: break-word; /* Allow long words to break and wrap */
-  word-wrap: break-word; /* For better compatibility */
-  max-width: 100%; /* Ensure the h6 does not exceed the width of the parent */
-  margin: 0; /* Remove default margin to prevent overflow */
+  overflow-wrap: break-word; /* Allow long words to break and wrap. */
+  word-wrap: break-word; /* For better compatibility. */
+  max-width: 100%; /* Ensure the h6 does not exceed the width of the parent. */
+  margin: 0; /* Remove default margin to prevent overflow. */
 }
 
 /*noscript*/
